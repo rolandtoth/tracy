@@ -222,6 +222,9 @@
 
 	Bar.prototype.initTabs = function() {
 		var _this = this, elem = this.elem;
+		
+		if (a.hasAttribute('data-click-added')) return true;
+		a.setAttribute('data-click-added', '');
 
 		forEach(elem.getElementsByTagName('a'), function(a) {
 			a.addEventListener('click', function(e) {
